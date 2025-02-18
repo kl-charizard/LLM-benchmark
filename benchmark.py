@@ -82,8 +82,8 @@ class BenchmarkTool:
 
         # Simulated INT8: use int8 tensors, then cast to int32 for multiplication.
         elif dtype == 'int8':
-            if self.device.type == 'mps':
-                print("Skipping INT8 test on MPS as non-float matrix multiplication is not supported.")
+            if self.device.type != 'cpu':
+                print(f"Skipping INT8 test on {self.device.type} as non-float matrix multiplication is not supported.")
                 return 0.0
             a = torch.randint(-128, 127, (size, size), device=self.device, dtype=torch.int8)
             b = torch.randint(-128, 127, (size, size), device=self.device, dtype=torch.int8)
@@ -103,8 +103,8 @@ class BenchmarkTool:
 
         # Simulated INT4: simulate 4-bit integers (range -8 to 7) then use int32 for multiplication.
         elif dtype == 'int4':
-            if self.device.type == 'mps':
-                print("Skipping INT4 test on MPS as non-float matrix multiplication is not supported.")
+            if self.device.type != 'cpu':
+                print(f"Skipping INT4 test on {self.device.type} as non-float matrix multiplication is not supported.")
                 return 0.0
             a = torch.randint(-8, 7, (size, size), device=self.device, dtype=torch.int8)
             b = torch.randint(-8, 7, (size, size), device=self.device, dtype=torch.int8)
