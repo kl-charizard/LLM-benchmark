@@ -37,8 +37,8 @@ The **LLM Benchmark Tool** is a Python-based GUI application designed to evaluat
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/kl-charizard/llm-benchmark-tool.git
-   cd llm-benchmark-tool
+   git clone https://github.com/kl-charizard/LLM-benchmark
+   cd LLM-benchmark
    ```
 
 2. **Install dependencies:**
