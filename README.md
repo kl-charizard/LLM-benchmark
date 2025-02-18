@@ -43,11 +43,7 @@ The **LLM Benchmark Tool** is a Python-based GUI application designed to evaluat
 
 2. **Install dependencies:**
 
-   - If you have a `requirements.txt` file:
-     ```bash
-     pip install -r requirements.txt
-     ```
-   - Otherwise, ensure that [PyTorch](https://pytorch.org/) is correctly installed:
+   - Ensure that [PyTorch](https://pytorch.org/) is correctly installed:
      ```bash
      pip install torch
      ```
